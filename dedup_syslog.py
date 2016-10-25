@@ -6,7 +6,6 @@ try:
     import stat
     import time
     import redis
-    import socket
     import hashlib
     import logging
     from bsddb3 import db as bsddb

@@ -224,16 +224,3 @@ class dedup_syslog:
 
         # Add exception handling
         bdb_con.put(key, value)
-
-    ######################################################
-    def sendUdp(self, ):
-    ######################################################
-        logger = logging.getLogger('sendUdp')
-        logger.info('')
-socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-socket.sendto(
-    "%s %s %s %s %s %s%s" % (month, date, tod, host, service, '', shasum),
-('localhost', 514)
-            )
-
-

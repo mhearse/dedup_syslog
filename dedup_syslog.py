@@ -61,8 +61,8 @@ class dedup_syslog:
         )
 
         redis_dbs = getattr(self, 'redis_dbs')
+        # Initialize Redis and BerkeleyDB connections for sum2msg and msg2sum.
         for db_name, db_number in redis_dbs.iteritems():
-            # Initialize Redis sum2msg connection.
             self._initRedis(
                 getattr(self, 'redis_host'),
                 getattr(self, 'redis_port'),
